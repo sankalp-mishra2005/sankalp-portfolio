@@ -1,0 +1,51 @@
+---
+import Logo from '@/components/Logo'
+---
+
+<footer class="py-20 border-t border-border px-6">
+  <div
+    class="max-w-screen-lg mx-auto flex flex-col-reverse sm:flex-row gap-10 justify-between"
+  >
+    <div class="flex flex-col gap-4 sm:gap-0 justify-between">
+      <Logo client:load />
+      <div class="space-y-4 sm:space-y-0">
+        <p class="text-md sm:text-base">
+          © 2026 Sankalp Mishra. All Rights Reserved.
+        </p>
+        <p class="text-muted-foreground text-sm">
+          Code, Gym, Black Coffee. Repeat.
+        </p>
+      </div>
+    </div>
+    <div class="flex gap-12">
+      <div class="space-y-3">
+        <div class="uppercase text-muted-foreground text-sm font-bold">
+          Main
+        </div>
+        <ul class="space-y-4">
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects"> Work </a>
+          </li>
+          <li>
+            <a href="/about"> About </a>
+          </li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <div class="uppercase text-muted-foreground text-sm font-bold">
+          Contact
+        </div>
+        <ul class="space-y-4">
+          <li><a href="https://github.com/sankalp-mishra2005">Github</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/sankalp-mishra-b09328216/"> LinkedIn </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sankalpduttmishra/"> Instagram </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

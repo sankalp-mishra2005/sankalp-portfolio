@@ -1,0 +1,49 @@
+---
+import '@fontsource-variable/dm-sans'
+import '@/styles/globals.css'
+import NoiseOverlay from '@/components/NoiseOverlay.astro'
+import Spotlight from '@/components/Spotlight.astro'
+import Header from '@/components/Header'
+import { Toaster } from '@/components/ui/sonner'
+import Footer from '@/components/home/Footer/Footer.astro'
+import { cn } from '@/lib/utils'
+
+interface Props {
+  showFooter?: boolean
+  className?: string
+}
+
+const { showFooter = true, className } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sankalp Mishra — Software Developer</title>
+    <script is:inline>
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'dark';
+      };
+      const isDark = getThemePreference() === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+    </script>
+  </head>
+  <body class="bg-background relative overflow-x-hidden transition-colors duration-300">
+    <Toaster client:load richColors />
+    <Spotlight />
+    <NoiseOverlay />
+    <Header client:idle />
+
+    <div class={cn('max-w-screen-lg min-h-svh mx-auto px-6', className)}>
+      <slot />
+    </div>
+
+    {showFooter && <Footer />}
+  </body>
+</html>
