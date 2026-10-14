@@ -3,9 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "scripts": {
+    "postinstall": "node scripts/patch-vercel.cjs",
     "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro check && astro build",
