@@ -1,5 +1,5 @@
 ---
-import Animate from '@/components/Animate.tsx';
+import Animate from '@/components/Animate.tsx'
 
 const frontendBackend = [
   { name: 'REACT', logo: '/skills/react.svg' },
@@ -7,8 +7,8 @@ const frontendBackend = [
   { name: 'TYPESCRIPT', logo: '/skills/typescript.svg' },
   { name: 'PYTHON', logo: '/skills/python.svg' },
   { name: 'TAILWIND', logo: '/skills/tailwind.svg' },
-  { name: 'NODE.JS', logo: '/skills/nodejs.svg' },
-];
+  { name: 'NODE.JS', logo: '/skills/nodejs.svg' }
+]
 
 const databaseTools = [
   { name: 'MONGODB', logo: '/skills/mongodb.svg' },
@@ -17,78 +17,122 @@ const databaseTools = [
   { name: 'GIT', logo: '/skills/git.svg' },
   { name: 'DOCKER', logo: '/skills/docker.svg' },
   { name: 'SPRING BOOT', logo: '/skills/springboot.svg' },
-  { name: 'AWS', logo: '/skills/aws.svg' },
-];
+  { name: 'AWS', logo: '/skills/aws.svg' }
+]
 ---
 
-<section class="py-24 relative overflow-hidden border-t border-border bg-background">
+<section
+  class="py-24 relative overflow-hidden border-t border-border bg-background"
+>
   <!-- Grid Background -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(120,119,198,0.03),transparent_60%)] pointer-events-none"></div>
-  <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+  <div
+    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(120,119,198,0.03),transparent_60%)] pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+  >
+  </div>
 
   <div class="max-w-screen-lg mx-auto px-6 relative z-10">
     <div class="max-w-3xl mb-16 space-y-4">
-      <Animate client:load initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-        <span class="text-xs font-bold tracking-widest uppercase text-muted-foreground bg-secondary px-3 py-1 rounded-full border border-border">
+      <Animate
+        client:load
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span
+          class="text-xs font-bold tracking-widest uppercase text-muted-foreground bg-secondary px-3 py-1 rounded-full border border-border"
+        >
           Tech Stack
         </span>
       </Animate>
-      
-      <Animate client:load initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mt-2">
+
+      <Animate
+        client:load
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        <h2
+          class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mt-2"
+        >
           Tech Stack
         </h2>
       </Animate>
 
-      <Animate client:load initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
+      <Animate
+        client:load
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <p class="text-lg text-muted-foreground">
-          I design and build high-performance systems that prioritize scalability, reliability, and seamless user experiences.
+          I design and build high-performance systems that prioritize
+          scalability, reliability, and seamless user experiences.
         </p>
       </Animate>
     </div>
 
     <!-- Frontend & Backend Marquee -->
     <div class="space-y-6 my-10">
-      <div class="text-xs font-bold tracking-widest text-muted-foreground/80 dark:text-muted-foreground/60 uppercase">
+      <div
+        class="text-xs font-bold tracking-widest text-muted-foreground/80 dark:text-muted-foreground/60 uppercase"
+      >
         Frontend & Backend
       </div>
-      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,#000_15%,#000_85%,transparent_100%)]">
+      <div
+        class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,#000_15%,#000_85%,transparent_100%)]"
+      >
         <div class="flex gap-4 w-max animate-marquee py-2">
-          {[...frontendBackend, ...frontendBackend].map((tech) => (
-            <div class="flex items-center gap-3 px-6 py-4 bg-card/60 backdrop-blur-sm border border-border hover:border-foreground/20 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 select-none w-52 shrink-0">
-              <div class="size-8 flex items-center justify-center shrink-0">
-                <img 
-                  src={tech.logo} 
-                  alt={tech.name} 
-                  class={`w-full h-full object-contain transition-all filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] dark:drop-shadow-none ${tech.name === 'NEXT.JS' ? 'dark:invert' : ''}`} 
-                />
+          {
+            [...frontendBackend, ...frontendBackend].map((tech) => (
+              <div class="flex items-center gap-3 px-6 py-4 bg-card/60 backdrop-blur-sm border border-border hover:border-foreground/20 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 select-none w-52 shrink-0">
+                <div class="size-8 flex items-center justify-center shrink-0">
+                  <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    class={`w-full h-full object-contain transition-all filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] dark:drop-shadow-none ${tech.name === 'NEXT.JS' ? 'dark:invert' : ''}`}
+                  />
+                </div>
+                <span class="font-semibold text-sm tracking-wider text-card-foreground">
+                  {tech.name}
+                </span>
               </div>
-              <span class="font-semibold text-sm tracking-wider text-card-foreground">{tech.name}</span>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </div>
 
     <!-- Database & Tools Marquee -->
     <div class="space-y-6 my-10">
-      <div class="text-xs font-bold tracking-widest text-muted-foreground/80 dark:text-muted-foreground/60 uppercase">
+      <div
+        class="text-xs font-bold tracking-widest text-muted-foreground/80 dark:text-muted-foreground/60 uppercase"
+      >
         Database & Tools
       </div>
-      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,#000_15%,#000_85%,transparent_100%)]">
+      <div
+        class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,#000_15%,#000_85%,transparent_100%)]"
+      >
         <div class="flex gap-4 w-max animate-marquee-reverse py-2">
-          {[...databaseTools, ...databaseTools].map((tech) => (
-            <div class="flex items-center gap-3 px-6 py-4 bg-card/60 backdrop-blur-sm border border-border hover:border-foreground/20 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 select-none w-52 shrink-0">
-              <div class="size-8 flex items-center justify-center shrink-0">
-                <img 
-                  src={tech.logo} 
-                  alt={tech.name} 
-                  class={`w-full h-full object-contain transition-all filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] dark:drop-shadow-none ${tech.name === 'NEXT.JS' ? 'dark:invert' : ''}`} 
-                />
+          {
+            [...databaseTools, ...databaseTools].map((tech) => (
+              <div class="flex items-center gap-3 px-6 py-4 bg-card/60 backdrop-blur-sm border border-border hover:border-foreground/20 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 select-none w-52 shrink-0">
+                <div class="size-8 flex items-center justify-center shrink-0">
+                  <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    class={`w-full h-full object-contain transition-all filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] dark:drop-shadow-none ${tech.name === 'NEXT.JS' ? 'dark:invert' : ''}`}
+                  />
+                </div>
+                <span class="font-semibold text-sm tracking-wider text-card-foreground">
+                  {tech.name}
+                </span>
               </div>
-              <span class="font-semibold text-sm tracking-wider text-card-foreground">{tech.name}</span>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </div>

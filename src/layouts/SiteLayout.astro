@@ -25,16 +25,21 @@ const { showFooter = true, className } = Astro.props
     <title>Sankalp Mishra — Software Developer</title>
     <script is:inline>
       const getThemePreference = () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
         }
-        return 'dark';
-      };
-      const isDark = getThemePreference() === 'dark';
-      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+        return 'dark'
+      }
+      const isDark = getThemePreference() === 'dark'
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
     </script>
   </head>
-  <body class="bg-background relative overflow-x-hidden transition-colors duration-300">
+  <body
+    class="bg-background relative overflow-x-hidden transition-colors duration-300"
+  >
     <Toaster client:load richColors />
     <Spotlight />
     <NoiseOverlay />

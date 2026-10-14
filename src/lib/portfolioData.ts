@@ -27,7 +27,7 @@ export const aboutData = {
 
 I love building systems that combine intelligent algorithms with robust, clean software architectures. What began as a curiosity about artificial intelligence and programming quickly evolved into a commitment to engineering high-performance solutions that solve complex real-world problems.
 
-From developing gesture-controlled touchless drawing platforms to enterprise employee management systems, I enjoy translating complex technical challenges into user-centric products. I focus on developing modular RESTful APIs, optimized databases, and clean, responsive interfaces.
+From developing gesture-controlled touchless drawing platforms to AI mock interviewing systems and automated cloud deployment tools, I enjoy translating complex technical challenges into user-centric products. I focus on developing modular RESTful APIs, optimized databases, and clean, responsive interfaces.
 
 With strong attention to detail, efficiency, and code quality, I strive to build reliable products and form strong collaborative connections with teams and clients.`,
   signature: {
@@ -52,7 +52,7 @@ With strong attention to detail, efficiency, and code quality, I strive to build
     {
       start_at: "2023-08-01",
       end_at: "2027-05-30",
-      institution: "Vellore Institute of Technology, Bhopal",
+      institution: "Vellore Institute of Technology",
       course: "B.Tech in Computer Science and Engineering (AI & ML Specialization)",
       institution_logo: {
         url: "/education/vit.png"
@@ -119,15 +119,6 @@ export const socialsData = [
       iconfamily: "Si",
       iconstyle: { value: "" }
     }
-  },
-  {
-    slug: "instagram",
-    title: "Instagram",
-    metadata: {
-      url: "https://www.instagram.com/sankalpduttmishra/",
-      iconfamily: "Fi",
-      iconstyle: { value: "" }
-    }
   }
 ]
 
@@ -153,6 +144,84 @@ export const skillsData = [
 
 export const projectsData = [
   {
+    title: "AI Interviewer",
+    slug: "ai-interviewer",
+    metadata: {
+      type: "Personal",
+      overview: "An intelligent, AI-driven mock interview platform featuring real-time conversational evaluation, dynamic question generation, and detailed performance analytics.",
+      description: "Engineered an end-to-end AI Mock Interviewer platform leveraging Next.js, OpenAI GPT-4, and speech recognition to conduct interactive technical and behavioral interviews. Built dynamic audio-to-text response synthesis, automated scoring, and comprehensive feedback reports to help candidates practice and improve their interviewing skills.",
+      thumbnail: { url: "/projects/ai-interviewer.svg" },
+      primary_color: "#10b981",
+      tech_stack: [
+        { title: "Next.js", metadata: { logo: { url: "/skills/nextjs.svg" } } },
+        { title: "TypeScript", metadata: { logo: { url: "/skills/typescript.svg" } } },
+        { title: "Tailwind", metadata: { logo: { url: "/skills/tailwind.svg" } } },
+        { title: "PostgreSQL", metadata: { logo: { url: "/skills/postgresql.svg" } } }
+      ],
+      live_link: "https://github.com/sankalp-mishra2005",
+      github_repo: "https://github.com/sankalp-mishra2005",
+      features_new: `* **Real-Time Voice AI**: Interactive speech recognition and dynamic audio response synthesis.
+* **Adaptive Questioning**: LLM-driven context evaluation generating follow-up questions tailored to candidate answers.
+* **Automated Scoring**: Detailed feedback metrics analyzing technical depth, response clarity, and confidence.
+* **Performance Dashboard**: Visual progress tracking and historical performance analytics.`,
+      challenges_new: `* **Speech Latency Optimization**: Minimized real-time voice response latency by streaming audio chunks directly to client audio context.
+* **Structured Assessment Schema**: Enforced strict evaluation JSON response schemas using OpenAI function calling for consistent score formatting.`,
+      started_on: "2026-04-01",
+      ended_on: "2026-06-20",
+      highlights: [
+        { url: "/projects/ai-interviewer.svg", metadata: { data: "AI Interview Workspace" }, type: "image/svg+xml" }
+      ],
+      next_project: {
+        slug: "devdeploy",
+        title: "DevDeploy",
+        metadata: {
+          overview: "An automated cloud deployment and container orchestration platform for streamlined CI/CD workflows and instant app previews.",
+          thumbnail: { url: "/projects/devdeploy.svg" },
+          primary_color: "#6366f1"
+        }
+      }
+    }
+  },
+  {
+    title: "DevDeploy",
+    slug: "devdeploy",
+    metadata: {
+      type: "Personal",
+      overview: "An automated cloud deployment and container orchestration platform for streamlined CI/CD workflows and instant app previews.",
+      description: "Architected DevDeploy, a simplified deployment platform designed to automate containerization, build pipelines, and cloud hosting for web applications. Integrated Docker containers, AWS infrastructure, and webhook triggers to provide zero-downtime rolling updates and custom domain routing.",
+      thumbnail: { url: "/projects/devdeploy.svg" },
+      primary_color: "#6366f1",
+      tech_stack: [
+        { title: "Node.js", metadata: { logo: { url: "/skills/nodejs.svg" } } },
+        { title: "Docker", metadata: { logo: { url: "/skills/docker.svg" } } },
+        { title: "AWS", metadata: { logo: { url: "/skills/aws.svg" } } },
+        { title: "React.js", metadata: { logo: { url: "/skills/react.svg" } } }
+      ],
+      live_link: "https://github.com/sankalp-mishra2005",
+      github_repo: "https://github.com/sankalp-mishra2005",
+      features_new: `* **One-Click Deployments**: Automated Git repository connection, Docker build trigger, and cloud container hosting.
+* **Live Build Streaming**: Real-time console logs streamed over WebSockets and Redis pub/sub channels.
+* **Custom Domain Routing**: Automatic SSL certificate provisioning and reverse proxy routing.
+* **Environment Management**: Secure secret injection and multi-environment configuration (Staging/Production).`,
+      challenges_new: `* **Multi-Tenant Container Security**: Implemented isolated Docker networks and strict memory/CPU resource caps per deployment sandbox.
+* **High-Concurrency Logging**: Handled fast-flowing build output stdout streams using Redis pub/sub to decouple builder nodes from websocket subscribers.`,
+      started_on: "2026-05-01",
+      ended_on: "2026-07-15",
+      highlights: [
+        { url: "/projects/devdeploy.svg", metadata: { data: "Deployment Dashboard" }, type: "image/svg+xml" }
+      ],
+      next_project: {
+        slug: "virtual-canvas",
+        title: "Virtual Canvas",
+        metadata: {
+          overview: "A touchless virtual drawing platform utilizing advanced hand gesture recognition and computer vision to interact with canvas in real-time.",
+          thumbnail: { url: "/projects/virtual-canvas.svg" },
+          primary_color: "#1d4ed8"
+        }
+      }
+    }
+  },
+  {
     title: "Virtual Canvas",
     slug: "virtual-canvas",
     metadata: {
@@ -167,8 +236,8 @@ export const projectsData = [
         { title: "NumPy", metadata: { logo: { url: "/skills/python.svg" } } },
         { title: "MediaPipe", metadata: { logo: { url: "/skills/python.svg" } } }
       ],
-      live_link: "https://github.com/mishrasankalp2105",
-      github_repo: "https://github.com/mishrasankalp2105",
+      live_link: "https://github.com/sankalp-mishra2005",
+      github_repo: "https://github.com/sankalp-mishra2005",
       features_new: `* **Touchless Gestures**: Leverage MediaPipe for high-accuracy hand landmark estimation.
 * **Dynamic Palette**: Real-time color selection and canvas tools controlled by gestures.
 * **Optimized Latency**: Render canvas elements smoothly utilizing NumPy arrays and OpenCV pipeline.
@@ -206,8 +275,8 @@ export const projectsData = [
         { title: "React.js", metadata: { logo: { url: "/skills/react.svg" } } },
         { title: "Node.js", metadata: { logo: { url: "/skills/nodejs.svg" } } }
       ],
-      live_link: "https://github.com/mishrasankalp2105",
-      github_repo: "https://github.com/mishrasankalp2105",
+      live_link: "https://github.com/sankalp-mishra2005",
+      github_repo: "https://github.com/sankalp-mishra2005",
       features_new: `* **Freelancer Profiles**: Professional portfolios with rich text editing and showcases.
 * **JWT Authentication**: High-security, encrypted cookies and token rotations.
 * **Collaboration Workspace**: Easy client-freelancer connections and proposal workflows.
@@ -220,50 +289,12 @@ export const projectsData = [
         { url: "/projects/skillconnect.svg", metadata: { data: "Collaboration Dashboard" }, type: "image/svg+xml" }
       ],
       next_project: {
-        slug: "employee-management-system",
-        title: "Employee Management System",
+        slug: "ai-interviewer",
+        title: "AI Interviewer",
         metadata: {
-          overview: "An enterprise-grade Employee Management System developed for Steel Authority of India Limited (SAIL) to streamline record-keeping and database transactions.",
-          thumbnail: { url: "/companies/sail.svg" },
-          primary_color: "#0066cc"
-        }
-      }
-    }
-  },
-  {
-    title: "Employee Management System",
-    slug: "employee-management-system",
-    metadata: {
-      type: "Client",
-      overview: "An enterprise-grade Employee Management System developed for Steel Authority of India Limited (SAIL) to streamline record-keeping and database transactions.",
-      description: "Engineered a high-performance Employee Management System for Steel Authority of India Limited (SAIL) using Spring Boot and Oracle Database. Architected secure, modular RESTful APIs that optimized database transactions and automated records management. Implemented a robust modular layered architecture with Spring Data JPA integration and executed comprehensive testing via Postman to ensure compliance with industrial quality standards.",
-      thumbnail: { url: "/companies/sail.svg" },
-      primary_color: "#0066cc",
-      tech_stack: [
-        { title: "Java", metadata: { logo: { url: "/skills/java.svg" } } },
-        { title: "Spring Boot", metadata: { logo: { url: "/skills/springboot.svg" } } },
-        { title: "SQL", metadata: { logo: { url: "/skills/sql.svg" } } }
-      ],
-      live_link: "https://github.com/mishrasankalp2105",
-      github_repo: "https://github.com/mishrasankalp2105",
-      features_new: `* **Secure RESTful APIs**: Modular endpoints facilitating secure employee data transactions.
-* **Modular Architecture**: Layered system design integrated with Spring Data JPA.
-* **Oracle Database Integration**: Robust persistence layer optimized for enterprise transactions.
-* **API Testing**: Structured Postman test cases validating all business logic rules.`,
-      challenges_new: `* **Data Integrity**: Enforced complex enterprise schema relations in Oracle Database using JPA entity relations and transactions.
-* **Performance Tuning**: Optimized query latency by structuring indexes and writing clean query methods with Spring Data JPA.`,
-      started_on: "2026-06-01",
-      ended_on: "2026-06-15",
-      highlights: [
-        { url: "/companies/sail.svg", metadata: { data: "SAIL Enterprise Architecture" }, type: "image/svg+xml" }
-      ],
-      next_project: {
-        slug: "virtual-canvas",
-        title: "Virtual Canvas",
-        metadata: {
-          overview: "A touchless virtual drawing platform utilizing advanced hand gesture recognition and computer vision to interact with canvas in real-time.",
-          thumbnail: { url: "/projects/virtual-canvas.svg" },
-          primary_color: "#1d4ed8"
+          overview: "An intelligent, AI-driven mock interview platform featuring real-time conversational evaluation, dynamic question generation, and detailed performance analytics.",
+          thumbnail: { url: "/projects/ai-interviewer.svg" },
+          primary_color: "#10b981"
         }
       }
     }

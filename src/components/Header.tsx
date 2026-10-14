@@ -34,7 +34,7 @@ const Header = () => {
       className={cn(
         'max-w-screen-lg  items-center space-y-8 px-6 py-2 mx-auto border-b border-transparent transition-[colors,backdrop-filter] duration-300 md:duration-0 fixed w-full inset-x-0 top-0 backdrop-blur-noner z-40',
         toggleHeader &&
-          'bg-background/80 border-border md:bg-transparent backdrop-blur-lg'
+        'bg-background/80 border-border md:bg-transparent backdrop-blur-lg'
       )}
     >
       <div

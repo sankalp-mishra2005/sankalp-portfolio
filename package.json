@@ -54,6 +54,7 @@
     "typescript": "^5.5.2"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/typography": "^0.5.15",
     "prettier-plugin-astro": "^0.14.1",
     "prisma": "^5.19.1"

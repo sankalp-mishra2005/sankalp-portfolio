@@ -1,4 +1,4 @@
-import type { TypeOf, z } from 'astro/zod'
+import type { z } from 'astro/zod'
 import { contactSchema } from './types'
 
 type PayloadType = z.infer<typeof contactSchema>
@@ -32,8 +32,7 @@ const createEmbed = (data: PayloadType) => {
 const sendDiscordNotification = async (payload: PayloadType) => {
   // send the webhook message to my discord server
   const res = await fetch(
-    `https://discord.com/api/webhooks/${import.meta.env.WEBHOOK_ID}/${
-      import.meta.env.WEBHOOK_TOKEN
+    `https://discord.com/api/webhooks/${import.meta.env.WEBHOOK_ID}/${import.meta.env.WEBHOOK_TOKEN
     }`,
     {
       method: 'POST',
